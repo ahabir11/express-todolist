@@ -59,6 +59,7 @@ var TodoCtrl = function(Todo) {
     }
 
     TodoObj.DeleteTodoMultiple = function(req, res, next) {
+
         Todo.remove({ _id: { $in: ['59db737cfa9a44057c61d256', '59db7b03a4265333f85fe96c'] } }, function(err, todos) {
             if (err) {
                 res.json({ status: false, error: "Deleting todos is not successfull" });
